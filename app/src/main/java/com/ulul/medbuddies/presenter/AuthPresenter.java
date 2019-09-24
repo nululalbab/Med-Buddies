@@ -11,6 +11,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.ulul.medbuddies.contract.AuthContract;
 import com.ulul.medbuddies.ui.activity.LoginActivity;
 import com.ulul.medbuddies.ui.activity.NavBottomActivity;
@@ -22,6 +27,7 @@ public class AuthPresenter implements AuthContract.Presenter {
     String username;
     String email;
     String password;
+    DatabaseReference databaseReference;
 
 
     public AuthPresenter(AuthContract.View authContract){
@@ -29,6 +35,8 @@ public class AuthPresenter implements AuthContract.Presenter {
         this.username = "";
         this.email = "";
         this.password = "";
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -65,8 +73,10 @@ public class AuthPresenter implements AuthContract.Presenter {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 authContract.getCurrentUser(user);
 
+                                checkData();
+
                                 authContract.message("Authentication Berhasil.");
-                                authContract.onSuccess();
+//                                authContract.onSuccess();
 
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -76,6 +86,25 @@ public class AuthPresenter implements AuthContract.Presenter {
                         }
                     });
         }
+    }
+
+    public void checkData(){
+        databaseReference.child("user").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+//                    authContract.onSuccess();
+                } else {
+                    authContract.checkData();
+//                    authContract.onError();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                authContract.onError();
+            }
+        });
     }
 
     @Override

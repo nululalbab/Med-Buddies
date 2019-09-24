@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ulul.medbuddies.R;
 import com.ulul.medbuddies.contract.AuthContract;
+import com.ulul.medbuddies.model.DataInformation;
 import com.ulul.medbuddies.presenter.AuthPresenter;
 
 public class LoginActivity extends AppCompatActivity implements AuthContract.View {
@@ -100,5 +101,12 @@ public class LoginActivity extends AppCompatActivity implements AuthContract.Vie
     @Override
     public void getCurrentUser(FirebaseUser currentUser) {
 //        mAuth = currentUser;
+    }
+
+    @Override
+    public void checkData() {
+        Intent goHome = new Intent(LoginActivity.this, DataInformationActivity.class);
+        startActivity(goHome);
+        finish();
     }
 }

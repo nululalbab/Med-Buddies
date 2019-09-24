@@ -7,6 +7,7 @@ import com.ulul.medbuddies.base.BaseView;
 public class AuthContract {
     public interface View extends BaseView<Presenter> {
         void getCurrentUser(FirebaseUser currentUser);
+        void checkData();
     }
 
     public interface Presenter extends BasePresenter {
