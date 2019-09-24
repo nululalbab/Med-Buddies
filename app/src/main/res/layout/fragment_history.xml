@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginVertical="10dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <TextView
 
                     android:layout_width="wrap_content"
@@ -92,20 +92,13 @@
                     android:textColor="#fff"
                     />
                 <TextView
-                android:layout_marginLeft="30dp"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="46"
+                android:text="46 Times"
                 android:textSize="24dp"
                 android:textColor="#fff"/>
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Times"
-                    android:textSize="8dp"
-                    android:textColor="#fff"/>
-            </LinearLayout>
+                </LinearLayout>
         </LinearLayout>
 
 
@@ -130,29 +123,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginVertical="10dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Regular Medication"
+                    android:text="Skipped Medication"
                     android:textSize="18dp"
                     android:textColor="#fff"
                     />
                 <TextView
-                    android:layout_marginLeft="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="46"
-                    android:textSize="24dp"
-                    android:textColor="#fff"/>
-                <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Times"
-                    android:textSize="8dp"
+                    android:text="6 TImes"
+                    android:textSize="24dp"
                     android:textColor="#fff"/>
+
             </LinearLayout>
         </LinearLayout>
 
