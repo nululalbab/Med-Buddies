@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".History">
+    tools:context=".ui.fragment.History">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout

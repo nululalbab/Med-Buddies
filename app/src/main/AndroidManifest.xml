@@ -16,16 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
         <activity
-            android:name=".NavBottomActivity"
+            android:name=".ui.activity.NavBottomActivity"
             android:label="@string/title_activity_nav_bottom" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ui.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
     </application>
 
 </manifest>

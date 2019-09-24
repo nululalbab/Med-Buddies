@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#efefef"
-    tools:context=".LoginActivity">
+    tools:context=".ui.activity.LoginActivity">
     <ImageView
         android:src="@drawable/login_kiri_atas"
         android:layout_width="wrap_content"

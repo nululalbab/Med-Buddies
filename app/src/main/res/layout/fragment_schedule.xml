@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:backgroundTint="#FFF"
     android:background="#FFF"
-    tools:context=".Schedule"
+    tools:context=".ui.fragment.Schedule"
     android:id="@+id/rl_schedule">
 
     <!-- TODO: Update blank fragment layout -->

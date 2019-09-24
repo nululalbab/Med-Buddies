@@ -6,7 +6,7 @@
     android:backgroundTint="#FFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NavBottomActivity">
+    tools:context=".ui.activity.NavBottomActivity">
 
     <LinearLayout
         android:id="@+id/content"
