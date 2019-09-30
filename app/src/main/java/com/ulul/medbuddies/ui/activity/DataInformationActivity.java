@@ -1,5 +1,7 @@
 package com.ulul.medbuddies.ui.activity;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +14,7 @@ import com.ulul.medbuddies.presenter.DataInformationPresenter;
 
 public class DataInformationActivity extends AppCompatActivity implements DataInformationContract.View {
     DataInformationPresenter presenter;
-    Button btn_submit;
+
 
     EditText nama, no_telp, alamat, ttl, jenis_kelamin, sumber_biaya;
 
@@ -24,7 +26,7 @@ public class DataInformationActivity extends AppCompatActivity implements DataIn
         presenter = new DataInformationPresenter(this);
         presenter.setContext(this);
 
-        btn_submit = (Button) findViewById(R.id.btn_submit);
+        FloatingActionButton btn_submit = findViewById(R.id.btn_submit);
 
         nama = (EditText) findViewById(R.id.nama);
         no_telp = (EditText) findViewById(R.id.no_telp);
@@ -60,7 +62,9 @@ public class DataInformationActivity extends AppCompatActivity implements DataIn
 
     @Override
     public void onSuccess() {
-
+        Intent goHome = new Intent(DataInformationActivity.this, NavBottomActivity.class);
+        startActivity(goHome);
+        finish();
     }
 
     @Override

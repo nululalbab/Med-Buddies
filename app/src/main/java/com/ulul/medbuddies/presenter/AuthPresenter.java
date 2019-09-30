@@ -76,7 +76,7 @@ public class AuthPresenter implements AuthContract.Presenter {
                                 checkData();
 
                                 authContract.message("Authentication Berhasil.");
-//                                authContract.onSuccess();
+                                authContract.onSuccess();
 
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -93,7 +93,7 @@ public class AuthPresenter implements AuthContract.Presenter {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
-//                    authContract.onSuccess();
+                    authContract.onSuccess();
                 } else {
                     authContract.checkData();
 //                    authContract.onError();

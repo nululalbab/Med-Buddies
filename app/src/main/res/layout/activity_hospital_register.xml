@@ -38,8 +38,8 @@
 
             android:drawableLeft="@drawable/ic_person_outline_black_24dp"
             android:drawablePadding="20dp"
-            android:id="@+id/nama"
-            android:hint="Nama"
+            android:id="@+id/nama_rumahsakit"
+            android:hint="Nama Rumah Sakit"
             android:backgroundTint="#FFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -48,12 +48,12 @@
 
             android:id="@+id/v_separator"
             android:background="#E8E9E8"
-            android:layout_below="@id/nama"
+            android:layout_below="@id/nama_rumahsakit"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"/>
 
         <EditText
-            android:id="@+id/alamat"
+            android:id="@+id/alamat_rumahsakit"
             android:paddingLeft="20dp"
             android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
             android:drawablePadding="20dp"
@@ -67,11 +67,11 @@
 
             android:id="@+id/v_separator2"
             android:background="#E8E9E8"
-            android:layout_below="@id/alamat"
+            android:layout_below="@id/alamat_rumahsakit"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"/>
         <EditText
-            android:id="@+id/no_telp"
+            android:id="@+id/no_telp_rumahsakit"
             android:paddingLeft="20dp"
             android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
             android:drawablePadding="20dp"
@@ -87,55 +87,11 @@
         android:layout_below="@id/no_telp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"/>
-        <EditText
-            android:id="@+id/ttl"
-            android:paddingLeft="20dp"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="20dp"
-            android:backgroundTint="#FFF"
-            android:layout_below="@id/v_separator3"
-            android:hint="Tempat Tanggal Lahir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <View
-
-        android:id="@+id/v_separator4"
-        android:background="#E8E9E8"
-        android:layout_below="@id/ttl"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"/>
-        <EditText
-            android:id="@+id/jenis_kelamin"
-            android:paddingLeft="20dp"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="20dp"
-            android:backgroundTint="#FFF"
-            android:layout_below="@id/v_separator4"
-            android:hint="Jenis Kelamin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <View
-
-            android:id="@+id/v_separator5"
-            android:background="#E8E9E8"
-            android:layout_below="@id/jenis_kelamin"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"/>
-        <EditText
-            android:id="@+id/sumber_biaya"
-            android:paddingLeft="20dp"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="20dp"
-            android:backgroundTint="#FFF"
-            android:layout_below="@id/v_separator5"
-            android:hint="Sumber Biaya"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_submit_hospital"
         android:layout_marginRight="45dp"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
@@ -150,7 +106,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:text="Biodata"
+        android:text="Hospital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
