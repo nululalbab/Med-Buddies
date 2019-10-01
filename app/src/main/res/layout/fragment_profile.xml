@@ -36,23 +36,22 @@
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Najibullah Ulul Albab"
+
                     android:textColor="#FFF"/>
                 <TextView
-                    android:id="@+id/profile_birthdate"
+                    android:id="@+id/profile_phone"
                     android:layout_below="@id/profile_name"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="31 Juli 1997"
-                    android:textColor="#FFF"/>
+                                       android:textColor="#FFF"/>
                 <TextView
                     android:id="@+id/profile_address"
-                    android:layout_below="@id/profile_birthdate"
+                    android:layout_below="@id/profile_phone"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jl. Jagir Sidoresmo VII No 86, Surabaya"
+
                     android:textColor="#FFF"/>
 
 
@@ -166,7 +165,7 @@
                 android:id="@+id/tv_hospital_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rumah Sakit Dr. Soetomo Surabaya"
+                android:text="Harap isi Rumah Sakit terlebih dahulu."
                 android:textSize="14dp"
                 android:textColor="#fff"/>
             <TextView
@@ -174,7 +173,16 @@
                 android:layout_below="@id/tv_hospital_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0812424249924"
+
+                android:textSize="12dp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/tv_hospital_address"
+                android:layout_below="@id/tv_hospital_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dp"
+                
                 android:textSize="12dp"
                 android:textColor="#fff"/>
             <android.support.design.widget.FloatingActionButton
