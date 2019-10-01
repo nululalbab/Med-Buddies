@@ -1,7 +1,6 @@
 package com.ulul.medbuddies.model;
 
 public class Hospital {
-<<<<<<< HEAD
     private String nama;
     private String telp;
     private String alamat;
@@ -28,7 +27,7 @@ public class Hospital {
 
     public void setAlamat(String alamat) {
         this.alamat = alamat;
-=======
+    }
     String nama_rumahsakit;
     String alamat_rumahsakit;
     String no_telp_rumahsakit;
@@ -65,6 +64,5 @@ public class Hospital {
 
     public void setNo_telp_rumahsakit(String no_telp_rumahsakit) {
         this.no_telp_rumahsakit = no_telp_rumahsakit;
->>>>>>> c9fec7e82d6cdf9fb51823c58d26b33e95a90fb1
     }
 }
