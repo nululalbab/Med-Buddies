@@ -38,48 +38,13 @@
 
             android:drawableLeft="@drawable/ic_person_outline_black_24dp"
             android:drawablePadding="20dp"
-            android:id="@+id/nama_rumahsakit"
-            android:hint="Nama Rumah Sakit"
+            android:id="@+id/no_telp_caretaker"
+            android:hint="Masukkan No Telp Caretkaer"
             android:backgroundTint="#FFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <View
 
-            android:id="@+id/v_separator"
-            android:background="#E8E9E8"
-            android:layout_below="@id/nama_rumahsakit"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"/>
-
-        <EditText
-            android:id="@+id/alamat_rumahsakit"
-            android:paddingLeft="20dp"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="20dp"
-            android:backgroundTint="#FFF"
-            android:layout_below="@id/v_separator"
-            android:hint="Alamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             />
-        <View
-
-            android:id="@+id/v_separator2"
-            android:background="#E8E9E8"
-            android:layout_below="@id/alamat_rumahsakit"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"/>
-        <EditText
-            android:id="@+id/no_telp_rumahsakit"
-            android:paddingLeft="20dp"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="20dp"
-            android:backgroundTint="#FFF"
-            android:layout_below="@id/v_separator2"
-            android:hint="No Telp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
 
     </RelativeLayout>

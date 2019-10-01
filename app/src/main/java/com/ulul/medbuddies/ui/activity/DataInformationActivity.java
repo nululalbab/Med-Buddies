@@ -34,14 +34,15 @@ public class DataInformationActivity extends AppCompatActivity implements DataIn
         ttl = (EditText) findViewById(R.id.ttl);
         jenis_kelamin = (EditText) findViewById(R.id.jenis_kelamin);
         sumber_biaya = (EditText) findViewById(R.id.sumber_biaya);
-
+        final String role = "pasien";
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.setData(nama.getText().toString(), alamat.getText().toString(), no_telp.getText().toString(),
-                        ttl.getText().toString(), jenis_kelamin.getText().toString(), sumber_biaya.getText().toString());
+                        ttl.getText().toString(), jenis_kelamin.getText().toString(), sumber_biaya.getText().toString(), role);
                 presenter.submitData();
-            }
+                onSuccess();
+                }
         });
     }
 
