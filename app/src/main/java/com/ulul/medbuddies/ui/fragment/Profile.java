@@ -77,7 +77,7 @@ public class Profile extends Fragment {
 
        FirebaseDatabase getDatabase = FirebaseDatabase.getInstance();
        DatabaseReference getRefenence = getDatabase.getReference();
-            //Read Profile
+       //Read Profile
         getRefenence.child("user").child(auth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -99,9 +99,6 @@ public class Profile extends Fragment {
         });
 
 //      Read Hospital
-
-
-
         getRefenence.child("hospital").child(auth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -125,7 +122,7 @@ public class Profile extends Fragment {
                             }
                         }
                     });
-
+                    //Register Rumahsakit
                 } else {
 
                     fab_call_hospital.setOnClickListener(new View.OnClickListener() {
@@ -145,38 +142,11 @@ public class Profile extends Fragment {
                 Log.e("MyListData", "Error: ", databaseError.toException());
             }
         });
+//      Read Caretaker
+
 
 
 
     }
-
-//    private void makePhoneCall(String number) {
-//        if (number.trim().length() > 0) {
-//
-//            if (ContextCompat.checkSelfPermission(Profile.this,
-//                    Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-//                Fragment.requestPermissions(Profile.this,
-//                        new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
-//            } else {
-//                String dial = "tel:" + number;
-//                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-//            }
-//
-//        } else {
-//
-//        }
-//    }
-//
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        if (requestCode == REQUEST_CALL) {
-//            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                makePhoneCall();
-//            } else {
-//
-//            }
-//        }
-//    }
-
 
 }

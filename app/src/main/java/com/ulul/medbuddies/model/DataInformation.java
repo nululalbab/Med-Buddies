@@ -7,31 +7,19 @@ public class DataInformation {
     String ttl;
     String jenis_kalamin;
     String sumber_biaya;
+    String role;
 
-    public DataInformation() {
-        nama = "";
-        alamat = "";
-        no_telp = "";
-        ttl = "";
-        jenis_kalamin = "";
-        sumber_biaya = "";
-    }
-
-    public DataInformation(String nama, String alamat, String no_telp, String ttl, String jenis_kalamin, String sumber_biaya) {
+    public DataInformation(String nama, String alamat, String no_telp, String ttl, String jenis_kalamin, String sumber_biaya, String role) {
         this.nama = nama;
         this.alamat = alamat;
         this.no_telp = no_telp;
         this.ttl = ttl;
         this.jenis_kalamin = jenis_kalamin;
         this.sumber_biaya = sumber_biaya;
+        this.role = role;
     }
 
-    public String getSumber_biaya() {
-        return sumber_biaya;
-    }
-
-    public void setSumber_biaya(String sumber_biaya) {
-        this.sumber_biaya = sumber_biaya;
+    public DataInformation() {
     }
 
     public String getNama() {
@@ -74,4 +62,19 @@ public class DataInformation {
         this.jenis_kalamin = jenis_kalamin;
     }
 
+    public String getSumber_biaya() {
+        return sumber_biaya;
+    }
+
+    public void setSumber_biaya(String sumber_biaya) {
+        this.sumber_biaya = sumber_biaya;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

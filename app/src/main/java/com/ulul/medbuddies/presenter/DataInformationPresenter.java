@@ -32,8 +32,8 @@ public class DataInformationPresenter implements DataInformationContract.Present
     }
 
     @Override
-    public void setData(String nama, String alamat, String no_telp, String ttl, String jenis_kelamin, String sumber_biaya) {
-        dataInformation = new DataInformation(nama, alamat, no_telp, ttl, jenis_kelamin, sumber_biaya);
+    public void setData(String nama, String alamat, String no_telp, String ttl, String jenis_kelamin, String sumber_biaya,String role) {
+        dataInformation = new DataInformation(nama, alamat, no_telp, ttl, jenis_kelamin, sumber_biaya,role);
     }
 
     @Override
