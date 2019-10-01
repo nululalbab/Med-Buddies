@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import static android.Manifest.permission.CALL_PHONE;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -114,7 +115,14 @@ public class Profile extends Fragment {
                     fab_call_hospital.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View view){
-                           // makePhoneCall(nope);
+                            Intent callIntent = new Intent(Intent.ACTION_CALL);
+                            callIntent.setData(Uri.parse("tel:" +nope ));
+
+                            if (ContextCompat.checkSelfPermission(getActivity(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                                startActivity(callIntent);
+                            } else {
+                                requestPermissions(new String[]{CALL_PHONE}, 1);
+                            }
                         }
                     });
 
